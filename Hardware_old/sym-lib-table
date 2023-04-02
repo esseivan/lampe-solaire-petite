@@ -1,4 +1,4 @@
 (sym_lib_table
-  (lib (name "LampeSolaire2-rescue")(type "Legacy")(uri "${KIPRJMOD}/LampeSolairePetite-rescue.lib")(options "")(descr ""))
+  (lib (name "LampeSolaire2-rescue")(type "Legacy")(uri "${KIPRJMOD}/LampeSolaire2-rescue.lib")(options "")(descr ""))
   (lib (name "l2")(type "KiCad")(uri "C:/Workspace/Github/KiCad_EsseivaN_Lib/schematic/l2.kicad_sym")(options "")(descr ""))
 )
