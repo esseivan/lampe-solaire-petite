@@ -857,7 +857,7 @@
     (property "Value" "10R" (id 1) (at 180.34 109.2199 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "" (id 2) (at 182.88 107.95 0)
+    (property "Footprint" "0ESN_Lib:Bourns_3362p_trimpot" (id 2) (at 182.88 107.95 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 182.88 107.95 0)
@@ -962,7 +962,7 @@
     (uuid 9c08c45f-ba32-4b2b-8fe9-de49dcdc4262)
     (property "Reference" "L1" (id 0) (at 139.7 83.82 90))
     (property "Value" "22uH" (id 1) (at 139.7 86.36 90))
-    (property "Footprint" "0ESNLib:sumida_CDRH_inductor" (id 2) (at 139.7 90.17 0)
+    (property "Footprint" "0ESN_Lib:sumida_CDRH_inductor" (id 2) (at 139.7 90.17 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 139.7 90.17 0)
@@ -1046,7 +1046,7 @@
     (property "Value" "LED_Series" (id 1) (at 168.91 93.7259 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "0ESNLib:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder" (id 2) (at 166.37 95.25 0)
+    (property "Footprint" "0ESN_Lib:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" (id 2) (at 166.37 95.25 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 166.37 95.25 0)
@@ -1065,7 +1065,7 @@
     (property "Value" "1uF" (id 1) (at 131.8641 107.1185 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "0ESNLib:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" (id 2) (at 129.54 105.41 0)
+    (property "Footprint" "0ESN_Lib:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" (id 2) (at 129.54 105.41 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 129.54 105.41 0)
@@ -1084,7 +1084,7 @@
     (property "Value" "0.22uF" (id 1) (at 196.85 101.6062 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "0ESNLib:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" (id 2) (at 194.31 100.33 0)
+    (property "Footprint" "0ESN_Lib:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" (id 2) (at 194.31 100.33 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 194.31 100.33 0)
@@ -1151,19 +1151,19 @@
       (reference "#PWR04") (unit 1) (value "GND") (footprint "")
     )
     (path "/be7fe3ef-4c8c-4441-a8b1-9f6c4a556dbd"
-      (reference "C1") (unit 1) (value "1uF") (footprint "0ESNLib:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
+      (reference "C1") (unit 1) (value "1uF") (footprint "0ESN_Lib:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
     )
     (path "/cabd8106-febf-4c1c-a427-4a77d8f3282a"
-      (reference "C2") (unit 1) (value "0.22uF") (footprint "0ESNLib:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
+      (reference "C2") (unit 1) (value "0.22uF") (footprint "0ESN_Lib:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
     )
     (path "/b9fa4c1e-5267-4696-a1ce-f87e6baeeb29"
-      (reference "D1") (unit 1) (value "LED_Series") (footprint "0ESNLib:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
+      (reference "D1") (unit 1) (value "LED_Series") (footprint "0ESN_Lib:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
     )
     (path "/e4ceb904-3dd0-416a-906e-cac55e2455db"
       (reference "J1") (unit 1) (value "Led connector") (footprint "0ESN_Lib:Connector_4p_m")
     )
     (path "/9c08c45f-ba32-4b2b-8fe9-de49dcdc4262"
-      (reference "L1") (unit 1) (value "22uH") (footprint "0ESNLib:sumida_CDRH_inductor")
+      (reference "L1") (unit 1) (value "22uH") (footprint "0ESN_Lib:sumida_CDRH_inductor")
     )
     (path "/a5b92ca1-98a4-4608-b742-8ab56d6b3726"
       (reference "R1") (unit 1) (value "NP 0R") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
@@ -1175,7 +1175,7 @@
       (reference "R3") (unit 1) (value "1R") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
     )
     (path "/0229117d-4c4e-4f89-956e-fd71503672e7"
-      (reference "RV1") (unit 1) (value "10R") (footprint "")
+      (reference "RV1") (unit 1) (value "10R") (footprint "0ESN_Lib:Bourns_3362p_trimpot")
     )
     (path "/17354649-0d95-44b1-afcb-6c3c12f701a5"
       (reference "U1") (unit 1) (value "AP3019A") (footprint "Package_TO_SOT_SMD:TSOT-23-6_HandSoldering")
