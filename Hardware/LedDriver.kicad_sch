@@ -830,7 +830,8 @@
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 854bc4e9-d8b3-4be4-ad9f-3dfba6a9caaa)
   )
-  (text "P = U^2/R = 0.2^2/R = 40/R mW ohm" (at 158.75 118.11 0)
+  (text "P = U^2/R = 0.2^2/R = 40/R mW ohm\nIled = 0.2V / Rfb\nRv1 = 10 => 0.22 A\nRv1 = 1 => 0.4 A"
+    (at 158.75 124.46 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid ba658c35-ea62-4eec-a53f-83487ecc1b03)
   )
