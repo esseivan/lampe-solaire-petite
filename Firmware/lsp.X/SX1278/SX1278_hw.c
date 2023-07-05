@@ -31,7 +31,7 @@ void SX1278_hw_Reset(void) {
 
     REST_LAT = HIGH;
 
-	HAL_DELAY(100);
+	HAL_DELAY(20);
 }
 
 void SX1278_hw_SPICommand(uint8_t cmd) {
@@ -48,6 +48,6 @@ uint8_t SX1278_hw_SPIReadByte(void) {
 }
 
 int SX1278_hw_GetDIO0(void) {
-    return DIO0_GetValue();
+    return DIO0_PORT;
 }
 
