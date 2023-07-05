@@ -70,5 +70,7 @@ uint8_t SX1278_hw_SPIReadByte(void);
  */
 int SX1278_hw_GetDIO0(void);
 
+int SX1278_hw_GetDIO1(void);
+
 #endif
 

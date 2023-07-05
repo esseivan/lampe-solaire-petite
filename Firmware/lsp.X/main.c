@@ -43,12 +43,17 @@ void main(void)
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
 
+#define RX
+    
     while (1)
     {
         // Add your application code
-        HAL_DELAY(500);
-        LED_GREEN_Toggle();
         
+        
+#ifdef TX
+        /****** TX *******/
+        LED_GREEN_Toggle();
+        HAL_DELAY(2500);
         // Send data
         uint8_t data[] = "Message 1";
         if (!SX1278_LoRaEntryTx(&SX1278, sizeof(data), 2000))
@@ -56,7 +61,37 @@ void main(void)
             continue;
         }
         
-        SX1278_LoRaTxPacket(&SX1278, (uint8_t*) data, sizeof(data), 2000);
+        SX1278_LoRaTxPacket(&SX1278, (uint8_t*) data, sizeof(data), 2000);  
+#endif
+        
+#ifdef RX
+        /****** RX *******/
+        uint8_t rxBuff[24] = {0};
+        LED_GREEN_Toggle();
+        SX1278_sleep(&SX1278);
+        HAL_DELAY(1000);
+        
+        // Checking for activity, enter CAD mode
+        SX1278_CAD(&SX1278);
+        
+        while (SX1278_hw_GetDIO0() == 0); // Wait for Cad Done
+        (&SX1278)->status = STANDBY;
+        
+        if (SX1278_hw_GetDIO1()) { // Is cad detected
+
+            SX1278_LoRaEntryRx(&SX1278, 16, 3000); // Begin reception for 1s timeout
+            if (SX1278_WaitRXPacket(&SX1278, 1000)) {
+                uint8_t nbBytes = SX1278_LoRaRxPacket(&SX1278);
+                if (nbBytes > 0) {
+                    SX1278_read(&SX1278, (uint8_t*) rxBuff, nbBytes);
+                    if (rxBuff[0] == 'M')
+                    {
+                        BATTERY_IND_Toggle();
+                    }
+                }
+            }
+        }
+#endif
     }
 }
 /**

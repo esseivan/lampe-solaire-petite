@@ -51,3 +51,7 @@ int SX1278_hw_GetDIO0(void) {
     return DIO0_PORT;
 }
 
+int SX1278_hw_GetDIO1(void) {
+    return DIO1_PORT;
+}
+
