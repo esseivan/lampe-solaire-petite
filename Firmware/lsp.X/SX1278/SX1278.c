@@ -150,6 +150,16 @@ void SX1278_sleep(SX1278_t *module) {
   module->status = SLEEP;
 }
 
+void SX1278_CAD(SX1278_t *module) {
+    // First enter in sleep mode before changing GPIOs
+    SX1278_sleep(module);
+  SX1278_SPIWrite(module, REG_LR_DIOMAPPING1, 0xA0);//DIO0=CadDone,DIO1=CadDetected
+  SX1278_clearLoRaIrq(module);
+  SX1278_SPIWrite(module, LR_RegIrqFlagsMask, 0xFA);//Open CadDone & Detected interrupt
+  SX1278_SPIWrite(module, LR_RegOpMode, 0x8F);
+  module->status = CAD;
+}
+
 void SX1278_entryLoRa(SX1278_t *module) {
   SX1278_SPIWrite(module, LR_RegOpMode, 0x88);
 }

@@ -14,7 +14,7 @@
 
 #include "SX1278_hw.h"
 
-#define SX1278_MAX_PACKET	256
+#define SX1278_MAX_PACKET	32
 #define SX1278_DEFAULT_TIMEOUT		3000
 
 //#define NETWORK_SYNC_WORD 0x50
@@ -319,18 +319,8 @@ void SX1278_clearLoRaIrq(SX1278_t *module);
  */
 int SX1278_LoRaEntryRx(SX1278_t *module, uint8_t length, uint32_t timeout);
 
-/**
- * \brief Wait RX packet
- *
- * Wait for RX packet reading DIO0
- *
- * \param[in]  module   Pointer to LoRa structure
- * \param[in]  timeout  Timeout in [ms]
- *
- * \return     1 if DIO0 is set
- *             0 if timeout was exceeded
- */
-int SX1278_WaitRXPacket(SX1278_t *module, uint32_t timeout);
+
+void SX1278_CAD(SX1278_t *module);
 
 /**
  * \brief Read data

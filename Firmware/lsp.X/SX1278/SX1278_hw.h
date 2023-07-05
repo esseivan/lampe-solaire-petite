@@ -48,6 +48,8 @@ void SX1278_hw_Reset(void);
  */
 void SX1278_hw_SPICommand(uint8_t cmd);
 
+int SX1278_WaitRXPacket(uint16_t timeout);
+
 /**
  * \brief Reads data via SPI
  *

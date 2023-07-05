@@ -66,7 +66,7 @@ void main(void)
         
 #ifdef RX
         /****** RX *******/
-        uint8_t rxBuff[24] = {0};
+        uint8_t rxBuff[32] = {0};
         LED_GREEN_Toggle();
         SX1278_sleep(&SX1278);
         HAL_DELAY(1000);
@@ -80,7 +80,7 @@ void main(void)
         if (SX1278_hw_GetDIO1()) { // Is cad detected
 
             SX1278_LoRaEntryRx(&SX1278, 16, 3000); // Begin reception for 1s timeout
-            if (SX1278_WaitRXPacket(&SX1278, 1000)) {
+            if (SX1278_WaitRXPacket(1000)) {
                 uint8_t nbBytes = SX1278_LoRaRxPacket(&SX1278);
                 if (nbBytes > 0) {
                     SX1278_read(&SX1278, (uint8_t*) rxBuff, nbBytes);

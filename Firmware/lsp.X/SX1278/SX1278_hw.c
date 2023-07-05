@@ -34,6 +34,17 @@ void SX1278_hw_Reset(void) {
 	HAL_DELAY(20);
 }
 
+int SX1278_WaitRXPacket(uint16_t timeout) {
+    while(1) {
+        if(SX1278_hw_GetDIO0())
+            return 1;
+        if(--timeout == 0) {
+            return 0;
+        }
+        HAL_DELAY(1);
+    }
+}
+
 void SX1278_hw_SPICommand(uint8_t cmd) {
 	SX1278_hw_SetNSS(0);
     SPI1_ExchangeByte(cmd);
