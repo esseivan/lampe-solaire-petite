@@ -73,6 +73,14 @@ void WDT_Initialize(void)
     WDTCON = 0x16;
 }
 
+void HAL_DELAY(uint16_t msec)
+{
+    for (uint16_t i = 0; i < msec; i++)
+    {
+        __delay_ms(1);
+    }
+}
+
 /**
  End of File
 */

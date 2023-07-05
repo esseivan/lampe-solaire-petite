@@ -54,7 +54,6 @@
 #include <conio.h>
 #include "interrupt_manager.h"
 #include "spi1.h"
-#include "memory.h"
 #include "adc.h"
 
 
@@ -96,6 +95,8 @@ void OSCILLATOR_Initialize(void);
     WDT_Initialize(void);
  */
 void WDT_Initialize(void);
+
+void HAL_DELAY(uint16_t msec);
 
 #endif	/* MCC_H */
 /**
